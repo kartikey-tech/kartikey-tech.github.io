@@ -1,223 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartikey Verma - QA Technical Lead</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-        --primary: #007acc;
-        --bg: #f9f9f9;
-        --text: #333;
-        --card: #fff;
-        }
-        [data-theme="dark"] {
-        --bg: #121212;
-        --text: #f9f9f9;
-        --card: #1e1e1e;
-        }
-        * {margin:0;padding:0;box-sizing:border-box;}
-        body {
-        font-family: 'Poppins', sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-        transition: background 0.3s, color 0.3s;
-        scroll-behavior: smooth;
-        }
-        header {
-        background: linear-gradient(to right, var(--primary), #00b4d8);
-        color: white;
-        text-align: center;
-        padding: 80px 20px;
-        position: relative;
-        overflow: hidden;
-        }
-        header img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        border: 4px solid white;
-        margin-bottom: 20px;
-        animation: float 3s ease-in-out infinite;
-        }
-        @keyframes float {
-        0%, 100% {transform: translateY(0);}
-        50% {transform: translateY(-10px);}
-        }
-        header h1 {font-size: 2.5em;}
-        header p {margin: 10px 0 20px;}
-        .btns {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        flex-wrap: wrap;
-        }
-        .btn {
-        background: white;
-        color: var(--primary);
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: 0.3s;
-        }
-        .btn:hover {background: #e0e0e0;}
-        nav {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        background: var(--card);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-        }
-        nav a {
-        color: var(--text);
-        text-decoration: none;
-        font-weight: 600;
-        padding: 8px 15px;
-        }
-        nav a:hover {background: var(--primary); color: white; border-radius: 4px;}
-        #theme-toggle {
-        border: none;
-        background: none;
-        cursor: pointer;
-        color: var(--text);
-        font-size: 1.2em;
-        }
-        section {
-        max-width: 1000px;
-        margin: 40px auto;
-        background: var(--card);
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        opacity: 0;
-        transform: translateY(40px);
-        transition: all 0.6s ease-out;
-        }
-        section.visible {
-        opacity: 1;
-        transform: translateY(0);
-        }
-        h2 {
-        color: var(--primary);
-        margin-bottom: 10px;
-        }
-        ul {margin-left: 20px;}
-        footer {
-        text-align: center;
-        background: var(--primary);
-        color: white;
-        padding: 20px;
-        margin-top: 40px;
-        }
-        @media (max-width: 600px) {
-        header h1 {font-size: 1.8em;}
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartikey Verma - QA Technical Lead</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #007acc;
+      --accent: #00b4d8;
+      --bg: #f9f9f9;
+      --text: #333;
+      --card: #fff;
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --text: #f9f9f9;
+      --card: #1e1e1e;
+    }
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+      scroll-behavior: smooth;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 20px;
+      position: relative;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      margin-bottom: 20px;
+    }
+    header h1 {font-size: 2.8em;}
+    header p {
+      font-size: 1.4em;
+      margin: 15px 0;
+      min-height: 40px;
+    }
+    .btns {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .btn {
+      background: white;
+      color: var(--primary);
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn:hover {background: #e0e0e0;}
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--card);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      padding: 5px 10px;
+    }
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -2px;
+      width: 100%; height: 2px;
+      background: var(--primary);
+    }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: var(--card);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease-out;
+    }
+    section.visible {opacity:1; transform: translateY(0);}
+    h2 {color: var(--primary); margin-bottom: 10px;}
+    ul {margin-left: 20px;}
+    footer {
+      text-align: center;
+      background: var(--primary);
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    #theme-toggle {
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: var(--text);
+      font-size: 1.2em;
+    }
+    @media (max-width: 600px) {
+      header h1 {font-size: 2em;}
+      header p {font-size: 1em;}
+    }
+  </style>
 </head>
-
 <body>
 
-    <header>
-        <img src="https://lh3.googleusercontent.com/d/11PMKGBO2qix5vrLDJ2u9UxxH7aofE13E" alt="Profile Picture">
-        <h1>Kartikey Verma</h1>
-        <p>QA Technical Lead | Automation | DevOps | API Testing</p>
-        <div class="btns">
-            <a class="btn" href="mailto:kkartikeyverma1@gmail.com">Hire Me</a>
-            <a class="btn" href="https://drive.google.com/uc?export=download&id=1SpL5TGdpU78RcEC0xU905zPpVER2cQef">Download CV</a>
-            <a class="btn" href="https://www.linkedin.com/in/kartikey-verma-194629b9/" target="_blank">LinkedIn</a>
-        </div>
-    </header>
+<header>
+  <img src="https://lh3.googleusercontent.com/d/11PMKGBO2qix5vrLDJ2u9UxxH7aofE13E" alt="Kartikey Verma Profile Picture">
+  <h1>Kartikey Verma</h1>
+  <p id="typing"></p>
+  <div class="btns">
+    <a class="btn" href="mailto:kkartikeyverma1@gmail.com">Hire Me</a>
+    <a class="btn" href="https://drive.google.com/uc?export=download&id=1SpL5TGdpU78RcEC0xU905zPpVER2cQef">Download CV</a>
+    <a class="btn" href="https://www.linkedin.com/in/kartikey-verma-194629b9/" target="_blank">LinkedIn</a>
+  </div>
+</header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#contact">Contact</a>
-        <button id="theme-toggle">🌙</button>
-    </nav>
+<nav>
+  <a href="#about" class="active">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
+  <button id="theme-toggle">🌙</button>
+</nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Result-driven QA Technical Lead with 6+ years of experience in Automation Testing, API Testing, DevOps, and CI/CD pipelines. Proven expertise in test strategy, framework development, and delivering high-quality enterprise solutions through leadership
-            and modern QA methodologies.</p>
-    </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>Result-driven QA Technical Lead with 6+ years of experience in Automation Testing, API Testing, DevOps, and CI/CD pipelines. Proven expertise in test strategy, framework development, and delivering high-quality enterprise solutions through leadership and modern QA methodologies.</p>
+</section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Software Testing (Manual & Automation), Test Framework Development</li>
-            <li>DevOps & CI/CD, Agile/Scrum Methodologies</li>
-            <li>API, Performance & Security Testing</li>
-            <li>Java, Selenium, Rest Assured, Postman, JMeter, Jenkins, AWS, Docker</li>
-        </ul>
-    </section>
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Software Testing (Manual & Automation), Test Framework Development</li>
+    <li>DevOps & CI/CD, Agile/Scrum Methodologies</li>
+    <li>API, Performance & Security Testing</li>
+    <li>Java, Selenium, Rest Assured, Postman, JMeter, Jenkins, AWS, Docker</li>
+  </ul>
+</section>
 
-    <section id="experience">
-        <h2>Work Experience</h2>
-        <ul>
-            <li><b>2024 – Present:</b> Yabx India Pvt Ltd – Technical Lead</li>
-            <li><b>2021 – 2024:</b> Infosys Limited – Test Engineer</li>
-            <li><b>2017 – 2019:</b> P2P System Pvt. Ltd. – Test Engineer</li>
-        </ul>
-    </section>
+<section id="experience">
+  <h2>Work Experience</h2>
+  <ul>
+    <li><b>2024 – Present:</b> Yabx India Pvt Ltd – Technical Lead</li>
+    <li><b>2021 – 2024:</b> Infosys Limited – Test Engineer</li>
+    <li><b>2017 – 2019:</b> P2P System Pvt. Ltd. – Test Engineer</li>
+  </ul>
+</section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li>M.Tech. Mechanical Engineering – NIT Jalandhar (2021)</li>
-            <li>B.Tech. Mechanical Engineering – Uttarakhand Technical University (2017)</li>
-        </ul>
-    </section>
+<section id="education">
+  <h2>Education</h2>
+  <ul>
+    <li>M.Tech. Mechanical Engineering – NIT Jalandhar (2021)</li>
+    <li>B.Tech. Mechanical Engineering – Uttarakhand Technical University (2017)</li>
+  </ul>
+</section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Automation Test Engineer – Simplilearn</li>
-            <li>SQL Testing, Java with Selenium, API Testing using Rest Assured, DevOps, Git – Udemy</li>
-        </ul>
-    </section>
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>Automation Test Engineer – Simplilearn</li>
+    <li>SQL Testing, Java with Selenium, API Testing using Rest Assured, DevOps, Git – Udemy</li>
+  </ul>
+</section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:kkartikeyverma1@gmail.com">kkartikeyverma1@gmail.com</a></p>
-        <p>Phone: +91-9897440380</p>
-        <p>Location: Dehradun, India</p>
-    </section>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:kkartikeyverma1@gmail.com">kkartikeyverma1@gmail.com</a></p>
+  <p>Phone: +91-9897440380</p>
+  <p>Location: Dehradun, India</p>
+</section>
 
-    <footer>
-        &copy; 2025 Kartikey Verma. All rights reserved.
-    </footer>
+<footer>
+  &copy; 2025 Kartikey Verma. All rights reserved.
+</footer>
 
-    <script>
-        const toggleBtn = document.getElementById('theme-toggle');
-        toggleBtn.addEventListener('click', () => {
-        document.body.dataset.theme =
-        document.body.dataset.theme === 'dark' ? '' : 'dark';
-        toggleBtn.textContent = document.body.dataset.theme === 'dark' ? '☀️' : '🌙';
-        });
-        
-        const sections = document.querySelectorAll('section');
-        const revealSections = () => {
-        sections.forEach(sec => {
-        const rect = sec.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-        sec.classList.add('visible');
-        }
-        });
-        };
-        window.addEventListener('scroll', revealSections);
-        revealSections();
-    </script>
+<script>
+  // Typing effect
+  const typingText = ["QA Technical Lead", "Automation Engineer", "DevOps Enthusiast"];
+  let i = 0, j = 0, current = "", isDeleting = false;
+  const typingEl = document.getElementById("typing");
+  function type() {
+    if (!isDeleting && j <= typingText[i].length) {
+      current = typingText[i].slice(0, ++j);
+      typingEl.textContent = current;
+      setTimeout(type, 100);
+    } else if (isDeleting && j >= 0) {
+      current = typingText[i].slice(0, j--);
+      typingEl.textContent = current;
+      setTimeout(type, 50);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) { i = (i + 1) % typingText.length; }
+      setTimeout(type, 800);
+    }
+  }
+  type();
+
+  // Dark/light mode
+  const toggleBtn = document.getElementById('theme-toggle');
+  toggleBtn.addEventListener('click', () => {
+    document.body.dataset.theme = document.body.dataset.theme === 'dark' ? '' : 'dark';
+    toggleBtn.textContent = document.body.dataset.theme === 'dark' ? '☀️' : '🌙';
+  });
+
+  // Scroll reveal & nav highlight
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
+  function revealSections() {
+    let index = sections.length;
+    while(--index && window.scrollY + 150 < sections[index].offsetTop) {}
+    navLinks.forEach(link => link.classList.remove('active'));
+    navLinks[index].classList.add('active');
+    sections.forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) sec.classList.add('visible');
+    });
+  }
+  window.addEventListener('scroll', revealSections);
+  revealSections();
+</script>
 </body>
-
 </html>
